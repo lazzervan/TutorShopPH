@@ -2,6 +2,6 @@
     "require": {
         "rapidwebltd/php-google-contacts-v3-api": "^2.0",
         "symfony/polyfill-mbstring": "*",
-        "ext-mbstring": "*",
+        "ext-mbstring": "*"
     }
 }
