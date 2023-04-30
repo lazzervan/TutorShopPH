@@ -25,7 +25,7 @@ if (isset($_POST['login'])) {
 	if (isset($_POST['email']) && isset($_POST['password'])) {
 		//$user_login = mysql_real_escape_string($_POST['email']);
 		$user_login = $_POST['email'];
-		//$user_login = mb_convert_case($user_login, MB_CASE_LOWER, "UTF-8");	
+		$user_login = mb_convert_case($user_login, MB_CASE_LOWER, "UTF-8");	
 		//$password_login = mysql_real_escape_string($_POST['password']);		
 		$password_login = $_POST['password'];
 		$password_login_md5 = md5($password_login);
