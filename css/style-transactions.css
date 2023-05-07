@@ -75,12 +75,6 @@ td {
     justify-content: center;
 }
 
-.side-menu .brand-name img {
-    height: 100%;
-    width: 100%;
-    object-fit: contain;
-}
-
 .side-menu li {
     font-size: 24px;
     padding: 10px 40px;
@@ -178,49 +172,27 @@ td {
     position: relative;
     margin-top: 10vh;
     min-height: 90vh;
+    padding: 10px;
 }
 
-.container .content .income-content {
-    height: 90vh;
-    display: grid;
-    grid-template-columns: repeat(5, 1fr);
-    grid-template-rows: 100px 1fr 1fr 1fr 1fr;
-    gap: 5px;
-    padding: 5px;
-    box-sizing: border-box;
-    border: 2px solid rgba(0, 0, 0, 0.2);
-}
-
-.container .content table th,
-td {
-    border: 2px solid rgba(0, 0, 0, 0.2);
-}
-
-.container .content .searchbar {
-    display: flex;
-    min-height: 10vh;
-    flex: 3;
-    background: white;
-    border: none;
-    justify-content: right;
-}
-
-.container .content .searchbar .searchinput {
-    min-width: 50vh;
-    border: 2px black;
+.container .content .content-header {
     display: flex;
     align-items: center;
-    margin-right: 30px;
+    justify-content: center;
+    width: 100%;
+    height: 75px;
+    background: white;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px rgba(0, 0, 0, 0.19);
 }
 
-.container .content .searchbar .searchinput input[type=text] {
-    border: 2px #444;
+.container .content .content-header input[type=text] {
+    border: none;
     background: #f1f1f1;
     padding: 10px;
     width: 50%;
 }
 
-.container .content .searchbar .searchinput button {
+.container .content .content-header button {
     width: 40px;
     height: 40px;
     border: none;
@@ -229,12 +201,12 @@ td {
     justify-content: center;
 }
 
-.container .content .searchbar .searchinput button img {
+.container .content .content-header button img {
     width: 20px;
     height: 20px;
 }
 
-.container .content .cards {
+.container .content .content-body .cards {
     padding: 20px 15px;
     display: flex;
     align-items: center;
@@ -242,65 +214,37 @@ td {
     flex-wrap: wrap;
 }
 
-.container .content .cards .card {
-    width: 250px;
+.container .content .content-body .cards .card {
+    width: 300px;
     height: 150px;
     background: white;
     margin: 20px 10px;
     display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: center;
+    text-indent: 10px;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px rgba(0, 0, 0, 0.19);
+}
+
+.container .content .content-body .transactions {
+    width: 100%;
+    height: 100%;
+}
+
+.container .content .content-body .transactions .transactions-title {
+    display: flex;
     align-items: center;
     justify-content: space-around;
-    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px rgba(0, 0, 0, 0.19);
-}
-
-.container .content .content-2 {
-    min-height: 60vh;
-    display: flex;
-    justify-content: space-around;
-    align-items: flex-start;
-    flex-wrap: wrap;
-}
-
-.container .content .content-2 .recent-payments {
-    min-height: 50vh;
-    flex: 5;
+    width: 100%;
+    height: 100px;
     background: white;
-    margin: 0 25px 25px 25px;
     box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px rgba(0, 0, 0, 0.19);
-    display: flex;
-    flex-direction: column;
 }
 
-.container .content .content-2 .new-students {
-    flex: 2;
-    background: white;
-    min-height: 50vh;
-    margin: 0 25px;
-    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px rgba(0, 0, 0, 0.19);
-    display: flex;
-    flex-direction: column;
-}
-
-.container .content .content-2 .new-students table td:nth-child(1) img {
-    height: 40px;
-    width: 40px;
-}
-
-@media screen and (max-width: 1050px) {
-    .side-menu li {
-        font-size: 18px;
-    }
-}
-
-@media screen and (max-width: 940px) {
-    .side-menu li span {
-        display: none;
-    }
-    .side-menu {
-        align-items: center;
-    }
-    .side-menu li img {
-        width: 40px;
-        height: 40px;
-    }
+.container .content .content-body .transactions .transactions-table {
+    min-height: 20vh;
+    max-height: 100vh;
+    width: 100%;
+    border: 2px solid #999;
 }

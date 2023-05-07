@@ -75,12 +75,6 @@ td {
     justify-content: center;
 }
 
-.side-menu .brand-name img {
-    height: 100%;
-    width: 100%;
-    object-fit: contain;
-}
-
 .side-menu li {
     font-size: 24px;
     padding: 10px 40px;
@@ -191,116 +185,90 @@ td {
     border: 2px solid rgba(0, 0, 0, 0.2);
 }
 
-.container .content table th,
-td {
-    border: 2px solid rgba(0, 0, 0, 0.2);
-}
-
-.container .content .searchbar {
+.container .content .income-content .total-income {
+    grid-column: 1/span 3;
+    grid-row: 1/span 2;
+    border: 2px solid black;
     display: flex;
-    min-height: 10vh;
-    flex: 3;
-    background: white;
-    border: none;
-    justify-content: right;
-}
-
-.container .content .searchbar .searchinput {
-    min-width: 50vh;
-    border: 2px black;
-    display: flex;
-    align-items: center;
-    margin-right: 30px;
-}
-
-.container .content .searchbar .searchinput input[type=text] {
-    border: 2px #444;
-    background: #f1f1f1;
-    padding: 10px;
-    width: 50%;
-}
-
-.container .content .searchbar .searchinput button {
-    width: 40px;
-    height: 40px;
-    border: none;
-    display: flex;
-    align-items: center;
     justify-content: center;
-}
-
-.container .content .searchbar .searchinput button img {
-    width: 20px;
-    height: 20px;
-}
-
-.container .content .cards {
-    padding: 20px 15px;
-    display: flex;
     align-items: center;
-    justify-content: space-between;
-    flex-wrap: wrap;
 }
 
-.container .content .cards .card {
-    width: 250px;
-    height: 150px;
-    background: white;
-    margin: 20px 10px;
+.container .content .income-content .total-income ul {
+    padding: 20px;
+    font-size: x-large;
+}
+
+.container .content .income-content .current-income {
+    grid-column: 4/span 2;
+    grid-row: 1/span 2;
+    border: 2px solid black;
+}
+
+.container .content .income-content .current-income .current-income-title {
+    height: 30%;
+    border: 2px solid black;
     display: flex;
+    justify-content: center;
     align-items: center;
-    justify-content: space-around;
-    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px rgba(0, 0, 0, 0.19);
 }
 
-.container .content .content-2 {
-    min-height: 60vh;
+.container .content .income-content .current-income table {
+    padding: 10px;
+    width: 100%;
+    height: 70%;
+}
+
+.container .content .income-content .recent-payments {
+    grid-column: 1/span 4;
+    grid-row: 3/span 3;
+    border: 2px solid black;
+}
+
+.container .content .income-content .recent-payments .recent-payments-title {
+    height: 20%;
+    border: 2px solid black;
     display: flex;
     justify-content: space-around;
-    align-items: flex-start;
-    flex-wrap: wrap;
+    align-items: center;
 }
 
-.container .content .content-2 .recent-payments {
-    min-height: 50vh;
-    flex: 5;
-    background: white;
-    margin: 0 25px 25px 25px;
-    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px rgba(0, 0, 0, 0.19);
+.container .content .income-content .recent-payments table {
+    padding: 10px;
+    width: 100%;
+    height: 80%;
+}
+
+.container .content .income-content .average-income {
+    grid-column: 5/span 1;
+    grid-row: 3/span 3;
+    border: 2px solid black;
+}
+
+.container .content .income-content .average-income .average-income-title {
+    height: 20%;
+    border: 2px solid black;
     display: flex;
-    flex-direction: column;
+    justify-content: center;
+    align-items: center;
 }
 
-.container .content .content-2 .new-students {
-    flex: 2;
-    background: white;
-    min-height: 50vh;
-    margin: 0 25px;
-    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px rgba(0, 0, 0, 0.19);
-    display: flex;
-    flex-direction: column;
+.container .content .income-content .average-income .average-income-content {
+    height: 80%;
+    border: 2px solid black;
 }
 
-.container .content .content-2 .new-students table td:nth-child(1) img {
-    height: 40px;
-    width: 40px;
+.container .content .income-content .average-income .average-income-content .average-year {
+    height: 33.33%;
+    border: 2px solid black;
 }
 
-@media screen and (max-width: 1050px) {
-    .side-menu li {
-        font-size: 18px;
-    }
+.container .content .income-content .average-income .average-income-content .average-month {
+    height: 33.33%;
+    border: 2px solid black;
 }
 
-@media screen and (max-width: 940px) {
-    .side-menu li span {
-        display: none;
-    }
-    .side-menu {
-        align-items: center;
-    }
-    .side-menu li img {
-        width: 40px;
-        height: 40px;
-    }
+.container .content .income-content .average-income .average-income-content .average-day {
+    height: 33.33%;
+    border: 2px solid black;
 }
